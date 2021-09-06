@@ -31,6 +31,9 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
+      - run:
+          name: "Set Python Version"
+          command: pyenv global 3.7.10
       - python/install-packages:
           pkg-manager: pipenv
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
