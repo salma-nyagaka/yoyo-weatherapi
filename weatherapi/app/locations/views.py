@@ -13,7 +13,6 @@ from .helpers.perform_computations import perform_computations
 class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
     """ Class to fetch weather data"""
 
-
     def get(self, request, city_name):
         """ Function to fetch weather data from
         external weather API"""
