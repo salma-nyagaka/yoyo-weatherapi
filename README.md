@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/salma-nyagaka/yoyo-weatherapi.svg?style=svg&circle-token=58c9525164497938d1301973f227259422fcb138)](https://circleci.com/gh/salma-nyagaka/yoyo-weatherapi)
 
 ## yoyo-weatherapi
 A weather API.
@@ -72,4 +73,4 @@ A weather API that enables users to get the minimum, maximum, average and median
  #### ENDPOINT
 | REQUEST | DESCRIPTION  | URL  |
 | :-----: | :-: | :-: |
-| GET | Fetch computed data from the API|  http://127.0.0.1:8000/api/locations/{city}/?days={number_of+days} |
+| GET | Fetch computed data from the API|  http://127.0.0.1:8000/api/locations/{city}/?days={number_of_days} |
