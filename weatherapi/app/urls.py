@@ -16,7 +16,7 @@ from django.urls import include, path
 
 
 urlpatterns = [
-    path('locations/<str:city_name>',
+    path('locations/',
          include(('weatherapi.app.locations.urls',
                   'buses'), namespace='locations')),
 ]
