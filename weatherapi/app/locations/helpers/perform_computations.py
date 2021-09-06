@@ -31,15 +31,16 @@ def perform_computations(data):
         "minimum_median": min_median
     }
 
-    return  max(maximum), min(minimum), average_data, median
+    return max(maximum), min(minimum), average_data, median
 
 
 def add(x, y):
     """
-    Function to add all numbers in the list
+    Function to add all elements in the list
     """
-    
+
     return x + y
+
 
 def median_number(data):
     """

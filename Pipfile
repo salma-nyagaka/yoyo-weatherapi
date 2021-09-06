@@ -61,6 +61,8 @@ MarkupSafe = "==1.1.1"
 "ruamel.yaml" = "==0.16.12"
 "ruamel.yaml.clib" = "==0.2.2"
 pytest-django = "*"
+pep8 = "*"
+pycodestyle = "*"
 
 [requires]
 python_version = "3.7"

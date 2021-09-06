@@ -1,5 +1,4 @@
 import json
-from statistics import median
 import requests
 from rest_framework import generics
 from rest_framework import status
@@ -20,22 +19,24 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
 
         url = settings.API_URL
         params = request.query_params
-        key = settings.API_KEY 
+        key = settings.API_KEY
 
         if key is not None:
             # Convert QueryDict to Python Dict
             params_dict = params.dict()
 
-            # Insert values to params 
+            # Insert values to params
             params_dict['key'] = key
             params_dict['q'] = city_name
-            
+
             validate_params(params_dict)
 
             data = requests.get(url, params=params_dict)
             response_data = json.loads(data.content)
- 
-            maximum, minimum, average, median = perform_computations(response_data)
+
+            # Get the computed data
+            maximum, minimum, average, median = perform_computations(
+                response_data)
 
             computation_data = {
                 "maximum": maximum,
@@ -53,4 +54,3 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
             "message": FORBIDDEN_MESSAGE
         }
         return Response(return_message, status=status.HTTP_403_FORBIDDEN)
-        

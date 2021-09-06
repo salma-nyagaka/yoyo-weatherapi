@@ -3,6 +3,6 @@ from .views import WeatherDataRetrieveApiView
 
 
 urlpatterns = [
-    path('', WeatherDataRetrieveApiView.as_view(), name='weather-api'),
-
+    path('<str:city_name>/', WeatherDataRetrieveApiView.as_view(),
+         name='weather-api'),
 ]
