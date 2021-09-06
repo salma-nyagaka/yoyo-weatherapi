@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework_api_key',
+    'rest_framework',
+
+    'weatherapi.app.locations',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +84,7 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD', ''),
         'HOST': os.getenv('DB_HOST'),
         'USER': os.getenv('DB_USER'),
-        'PORT': '5433',
+        'PORT': '5432',
     }
 }
 
@@ -123,3 +127,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+API_KEY = os.getenv('API_KEY', '')
