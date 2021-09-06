@@ -129,3 +129,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 API_KEY = os.getenv('API_KEY', '')
+API_URL = os.getenv('API_URL', '')
