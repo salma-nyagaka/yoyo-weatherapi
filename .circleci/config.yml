@@ -31,39 +31,11 @@ jobs:
     # CircleCI will report the results back to your VCS provider.
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
+      - python/install-packages:
+          pkg-manager: pip3
+          # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
+          # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
       - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            pytest --cov --cov-report=
-            codecov --token=CODECOV_TOKEN
-            coverage report
-            coverage xml
-
-      - run:
-          name: Send coverage to CodeCov
-          command: bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
-
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          name: Run tests
+          # This assumes pytest is installed via the install-package step above
+          command: pytest
