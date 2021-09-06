@@ -66,5 +66,3 @@ pycodestyle = "*"
 psycopg2-binary = "*"
 pillow = "*"
 
-[requires]
-python_version = "3.7.10"
