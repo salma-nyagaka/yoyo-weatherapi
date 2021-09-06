@@ -13,6 +13,7 @@ from .helpers.perform_computations import perform_computations
 class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
     """ Class to fetch weather data"""
 
+
     def get(self, request, city_name):
         """ Function to fetch weather data from
         external weather API"""
@@ -34,6 +35,7 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
             data = requests.get(url, params=params_dict)
             response_data = json.loads(data.content)
 
+            # Get the computed data
             maximum, minimum, average, median = perform_computations(
                 response_data)
 

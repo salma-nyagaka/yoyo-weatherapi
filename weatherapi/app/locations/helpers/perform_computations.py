@@ -36,7 +36,7 @@ def perform_computations(data):
 
 def add(x, y):
     """
-    Function to add all numbers in the list
+    Function to add all elements in the list
     """
 
     return x + y
