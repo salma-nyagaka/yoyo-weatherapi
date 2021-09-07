@@ -1,5 +1,6 @@
 [![Build Status](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi.svg?branch=develop)](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi)
 [![Coverage Status](https://coveralls.io/repos/github/salma-nyagaka/yoyo-weatherapi/badge.svg?branch=develop)](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi?branch=develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/aacacb955f626b290395/maintainability)](https://codeclimate.com/github/salma-nyagaka/yoyo-weatherapi/maintainability)
 ## yoyo-weatherapi
 A weather API.
 
