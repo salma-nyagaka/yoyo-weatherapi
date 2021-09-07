@@ -12,3 +12,11 @@ install:
 # run test scripts
 script:
 - pytest
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t coverage.py
+  - nyc report --reporter=html
+  
+# save coverage
+after_success:
+  - "coveralls"
