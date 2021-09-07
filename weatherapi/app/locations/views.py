@@ -30,7 +30,6 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
             # Insert values to params
             params_dict['key'] = key
             params_dict['q'] = city_name
-
             validate_params(params_dict)
 
             data = requests.get(url, params=params_dict)
@@ -42,7 +41,7 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
                 maximum, minimum, average, median = perform_computations(
                     response_data)
 
-                computation_data = {
+                computated_data = {
                     "maximum": maximum,
                     "minimum": minimum,
                     "average": average,
@@ -50,7 +49,7 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
                 }
                 return_message = {
                     "message": SUCCESS_MESSAGE.format("Weather data fetched"),
-                    "data": computation_data
+                    "data": computated_data
                 }
                 return Response(return_message, status=status.HTTP_200_OK)
             return_message = {
