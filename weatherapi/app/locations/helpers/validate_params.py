@@ -12,5 +12,5 @@ def validate_params(params):
 
     if 'days' not in params:
         raise ValidationError(
-            error_dict['required_params'].format("'day' is")
+            error_dict['required_params'].format("days is")
         )
