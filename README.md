@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/salma-nyagaka/yoyo-weatherapi.svg?style=svg&circle-token=58c9525164497938d1301973f227259422fcb138)](https://circleci.com/gh/salma-nyagaka/yoyo-weatherapi)
+[![codecov](https://codecov.io/gh/salma-nyagaka/yoyo-weatherapi/branch/ch-update-readme/graph/badge.svg?token=N0LHM0JZLA)](https://codecov.io/gh/salma-nyagaka/yoyo-weatherapi)
 
 ## yoyo-weatherapi
 A weather API.
