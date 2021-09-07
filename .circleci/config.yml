@@ -10,7 +10,6 @@ jobs:
       - run:
           command: |
             pipenv shell
-            . venv/bin/activate
             pipenv install
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
@@ -19,7 +18,7 @@ jobs:
       - run:
           name: Running tests
           command: |
-            . venv/bin/activate
+            pipenv shell
             pytest
       - store_artifacts:
           path: test-reports/
