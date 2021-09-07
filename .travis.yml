@@ -7,8 +7,7 @@ env:
 - DJANGO_SETTINGS_MODULE='weatherapi.settings'
 # install dependencies
 install:
-- pip install pipenv
-- pipenv install
+- pip install -r requirements.txt
 
 # run test scripts
 script:
