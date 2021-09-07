@@ -1,12 +1,11 @@
+import os
 import json
-from django.http import response
 import pytest
 from rest_framework import status
-from .base_file import BaseTestCase
 
-from django.test import TestCase
-from rest_framework.serializers import ValidationError
-from ..helpers.validate_params import validate_params
+from .base_file import BaseTestCase
+from ..helpers.perform_computations import add
+from django.conf import settings
 
 
 class TestWeatherApi(BaseTestCase):
@@ -33,4 +32,38 @@ class TestWeatherApi(BaseTestCase):
 
         response = json.loads(days_response.content)
 
-        assert response == ["'day' is required in params"]
+        assert response == {'status': False,
+                            "error": [
+                                'days is required in params'
+                            ]
+                            }
+
+    def test_no_key(self):
+        """ Test to check for response
+        when no key is passed"""
+        settings.API_KEY = ''
+        response = self.client.get(
+            self.weather_api_url,
+            self.params,
+            format="json"
+        )
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_wrong_key(self):
+        """ Test to check for response
+        when wrong key is passed"""
+        settings.API_KEY = 'trestrestgett'
+        response = self.client.get(
+            self.weather_api_url,
+            self.params,
+            format="json"
+        )
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+
+    def test_sum(self):
+        """ Test sum of two numbers """
+        result = add(3, 3)
+        self.assertEquals(6, result)
+
+    def teardown_method(self, method):
+        settings.API_KEY = os.getenv('API_KEY')
