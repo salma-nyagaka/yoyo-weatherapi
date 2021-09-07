@@ -1,5 +1,5 @@
-[![Build Status](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi.svg?branch=ch-update-readme)](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi)
-[![Coverage Status](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi/badge.svg?branch=ch-update-readme)](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi?branch=ch-update-readme)
+[![Build Status](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi.svg?branch=develop)](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi)
+[![Coverage Status](https://coveralls.io/repos/github/salma-nyagaka/yoyo-weatherapi/badge.svg?branch=develop)](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi?branch=develop)
 ## yoyo-weatherapi
 A weather API.
 
