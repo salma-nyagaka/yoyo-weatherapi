@@ -15,7 +15,7 @@ jobs:
         environment:
           DJANGO_SETTINGS_MODULE: "weatherapi.settings"
           CODECOV: ${CODECOV}
-          SECRET_KEY: "not-applicable"
+          SECRET_KEY: "stz-6*!-!vri1n$@hmx1h_n=o^gj$aj=mzzov@vc&6#(!=v6s9"
 
 
       # Specify service dependencies here if necessary
