@@ -1,0 +1,14 @@
+language: python
+python:
+- "2.7"
+# setup environment
+env:
+- DJANGO_VERSION=1.11.2
+- DJANGO_SETTINGS_MODULE='di_photouploader.settings.production'
+# install dependencies
+install:
+- pip install -r requirements.txt
+
+# run test scripts
+script:
+- pytest
