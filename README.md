@@ -1,4 +1,5 @@
-
+[![Build Status](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi.svg?branch=ch-update-readme)](https://app.travis-ci.com/salma-nyagaka/yoyo-weatherapi)
+[![Coverage Status](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi/badge.svg?branch=ch-update-readme)](https://coveralls.io/github/salma-nyagaka/yoyo-weatherapi?branch=ch-update-readme)
 ## yoyo-weatherapi
 A weather API.
 
@@ -72,4 +73,4 @@ A weather API that enables users to get the minimum, maximum, average and median
  #### ENDPOINT
 | REQUEST | DESCRIPTION  | URL  |
 | :-----: | :-: | :-: |
-| GET | Fetch computed data from the API|  http://127.0.0.1:8000/api/locations/{city}/?days={number_of+days} |
+| GET | Fetch computed data from the API|  http://127.0.0.1:8000/api/locations/{city}/?days={number_of_days} |

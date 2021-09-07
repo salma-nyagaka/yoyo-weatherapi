@@ -63,6 +63,6 @@ MarkupSafe = "==1.1.1"
 pytest-django = "*"
 pep8 = "*"
 pycodestyle = "*"
+psycopg2-binary = "*"
+pillow = "*"
 
-[requires]
-python_version = "3.7"
