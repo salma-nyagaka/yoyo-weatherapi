@@ -9,9 +9,9 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
       - run:
           command: |
-            python3 -m venv venv
+            pipenv shell
             . venv/bin/activate
-            pip install -r requirements.txt
+            pipenv install
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}
           paths:
