@@ -7,7 +7,7 @@ A weather API.
 ### Description
 A weather API that enables users to get the minimum, maximum, average and median temperature for a  given city and period of time.
 
-### Development set up
+#### Development set up
 
 -   Check that python 3 is installed:
 
@@ -84,3 +84,5 @@ A weather API that enables users to get the minimum, maximum, average and median
 | :-----: | :-: | :-: |
 | GET | Fetch computed data from the API|  http://127.0.0.1:8000/api/locations/{city}/?days={number_of_days} |
 
+#### Live URL
+[Yoyo Weather Api](http://ec2-54-170-206-91.eu-west-1.compute.amazonaws.com/api/locations/Nairobi/?days=2)
