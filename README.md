@@ -61,7 +61,7 @@ A weather API that enables users to get the minimum, maximum, average and median
     export API_URL='https://api.weatherapi.com/v1/forecast.json'
     ```
 
--   Get environment variable:
+-   Get environment variables:
 
     ```
     source .env
