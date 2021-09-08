@@ -7,7 +7,7 @@ A weather API.
 ### Description
 A weather API that enables users to get the minimum, maximum, average and median temperature for a  given city and period of time.
 
-#### Development set up
+### Development set up
 
 -   Check that python 3 is installed:
 
