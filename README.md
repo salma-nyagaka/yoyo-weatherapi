@@ -28,7 +28,7 @@ A weather API that enables users to get the minimum, maximum, average and median
     cd yoyo-weatherapi
     ```
 
-- INstall virtualenv
+- Install virtualenv
 
     ```
     pip install virtualenv

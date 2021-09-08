@@ -35,8 +35,9 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
             data = requests.get(url, params=params_dict)
             response_data = json.loads(data.content)
 
+            # Check if the response is successful
+            # otherwise return the error from the external API
             if data.status_code == 200:
-
                 # Get the computed data
                 maximum, minimum, average, median = perform_computations(
                     response_data)
