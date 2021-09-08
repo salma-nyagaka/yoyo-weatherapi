@@ -21,7 +21,7 @@ class RequestJSONRenderer(JSONRenderer):
             response_data = format_errors(data)
             return json.dumps({
                 'status': False,
-                'error': response_data[0],
+                'error': response_data[0]
             })
 
 
@@ -33,11 +33,11 @@ def format_errors(data):
     Returns:
         error(list): formated errors
     """
+
     formatted_data = []
 
     if 'message' in data:
         formatted_data.append(data['message'])
     else:
         formatted_data.append(data)
-
     return formatted_data

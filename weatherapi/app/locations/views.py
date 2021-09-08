@@ -53,7 +53,7 @@ class WeatherDataRetrieveApiView(generics.RetrieveAPIView):
                 }
                 return Response(return_message, status=status.HTTP_200_OK)
             return_message = {
-                "message": response_data['error']['message']
+                "message": response_data['error']
             }
             return Response(return_message, status=status.HTTP_400_BAD_REQUEST)
         return_message = {
