@@ -126,8 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+API_KEY = os.environ.get('API_KEY', '')
+API_URL = os.environ.get('API_URL', '')
+
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
-
-
-API_KEY = os.getenv('API_KEY', '')
-API_URL = os.getenv('API_URL', '')
